@@ -15,7 +15,7 @@ public class Grille {
             for (int j=0; j <= 7; j++){
             grille[i][j]=grille[i][numeroColonne];
             if (grille[i][j]==null){
-                grille[i][j]=UnJeton; 
+                grille[i][j]=unJeton; 
                 
             }
             
@@ -79,19 +79,35 @@ public class Grille {
         return false;
     }
     
-    public boolean placerdesintegrateur (int uneLigne,int uneColonne){
-        
+    public boolean placerDesintegrateur (int uneLigne,int uneColonne){
+        if(grille[uneLigne][uneColonne].presenceDesintegrateur()==true){
+            return false;
+        }else{
+            grille[uneLigne][uneColonne].presenceDesintegrateur();
+            return true;
+        }
     }
     
     public boolean placerTrouNoir (int uneLigne,int uneColonne){
-        
+        if(grille[uneLigne][uneColonne].presenceTrouNoir()==true){
+            return false;
+        }else{
+            grille[uneLigne][uneColonne].presenceTrouNoir();
+            return true;
+        }
     }
     
     public boolean supprimerJeton(int uneLigne,int uneColonne){
-        
+        if(grille[uneLigne][uneColonne]==null){
+            return false;
+        }else{
+            grille[uneLigne][uneColonne]=null;
+            return true;
+        }
     }
     
     public Jeton reupererJeton (int uneLigne,int uneColonne){
+        grille[uneLigne][uneColonne]=null;
         
     }
             
