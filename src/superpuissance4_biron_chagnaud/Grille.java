@@ -61,7 +61,9 @@ public class Grille {
     public void tasserGrille(){
         for (int i=1;i<7;i++){
             for(int j=0;j<6;j++){
-                grille[i-1][j] = grille[i][j];
+                if(grille[i][j] != null]){
+                    grille[i-1][j] = grille[i][j];
+                }
             }
         }
     }
@@ -77,19 +79,19 @@ public class Grille {
         return false;
     }
     
-    public boolean placerdesintegrateur (int nb,int nb1){
+    public boolean placerdesintegrateur (int uneLigne,int uneColonne){
         
     }
     
-    public boolean placerTrouNoir (int nb,int nb1){
+    public boolean placerTrouNoir (int uneLigne,int uneColonne){
         
     }
     
-    public boolean supprimerJeton(int nb, int nb1){
+    public boolean supprimerJeton(int uneLigne,int uneColonne){
         
     }
     
-    public Jeton reupererJeton (int nb, int nb1){
+    public Jeton reupererJeton (int uneLigne,int uneColonne){
         
     }
             
