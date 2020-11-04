@@ -59,11 +59,22 @@ public class Grille {
     }
     
     public void tasserGrille(){
-        
+        for (int i=1;i<7;i++){
+            for(int j=0;j<6;j++){
+                grille[i-1][j] = grille[i][j];
+            }
+        }
     }
     
     public boolean colonneRemplie(){
-        
+        for (int i=0;i<7;i++){
+            if(grille[6][i]!= null){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        return false;
     }
     
     public boolean placerdesintegrateur (int nb,int nb1){
