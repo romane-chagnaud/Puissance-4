@@ -13,15 +13,14 @@ public class Grille {
     public boolean ajouterJetonDansColonne(Jeton unJeton, int numeroColonne){
         for(int i=6; i >=0; i--){
             for (int j=0; j <= 7; j++){
-            grille[i][j]=grille[i][numeroColonne];
-            if (grille[i][j]==null){
-                grille[i][j]=unJeton; 
+                grille[i][j]=grille[i][numeroColonne];
+                if (grille[i][j]==null){
+                    grille[i][j].affecterJeton(unJeton); 
                 
+                }
             }
-            
-                
-          }
-            
+        }  
+        return false;
     }
     
     public boolean etreRempli(){
